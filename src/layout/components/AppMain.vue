@@ -1,7 +1,7 @@
 <template>
-  <section>
+  <el-main>
     <router-view/>
-  </section>
+  </el-main>
 </template>
 
 <script>
@@ -10,6 +10,10 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+.el-main{
+  padding: 15px;
+  margin: 15px;
+  background: #fff;
+}
 </style>

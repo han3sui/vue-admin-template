@@ -1,12 +1,12 @@
 <template>
-  <div class="app-body">
+  <el-container class="app-body">
     <app-aside class="app-aside"/>
-    <div class="app-container">
+    <el-container class="app-container">
       <app-nav class="app-nav"/>
       <app-main class="app-main"/>
       <app-footer class="app-footer"/>
-    </div>
-  </div>
+    </el-container>
+  </el-container>
 </template>
 
 <script>

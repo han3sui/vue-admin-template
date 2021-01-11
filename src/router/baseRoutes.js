@@ -24,7 +24,14 @@ const baseRoutes = [
         name: 'About4',
         meta: {
           title: '关于4'
-        }
+        },
+        children: [{
+          path: '/about5',
+          name: 'About5',
+          meta: {
+            title: '关于5'
+          }
+        }]
       }]
     }, {
       path: '/index',

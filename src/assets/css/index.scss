@@ -1,6 +1,10 @@
 @import "theme";
 @import "aside";
-
+@import "header";
+#app,body,html{
+  width: 100%;
+  height: 100%;
+}
 body {
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,6 +19,7 @@ body {
   .app-body {
     display: flex;
     flex-direction: row;
+    height: 100%;
 
     .app-aside {
       min-width: $aside-min-width;
@@ -40,5 +45,21 @@ body {
         }
       }
     }
+    .app-container{
+      flex-direction: column;
+      background-color: #f0f2f5;
+    }
   }
 }
+.el-scrollbar__wrap{
+  overflow-x: hidden;
+}
+//.el-scrollbar__bar{
+//  position: absolute;
+//  right: 2px;
+//  bottom: 2px;
+//  z-index: 1;
+//  border-radius: 4px;
+//  opacity: 0;
+//  transition: opacity .12s ease-out;
+//}

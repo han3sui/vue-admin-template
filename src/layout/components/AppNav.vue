@@ -1,5 +1,11 @@
 <template>
-  <nav></nav>
+  <el-header>
+    <div class="navbar-wrapper">
+      <div class="navbar-left"></div>
+      <div class="navbar-right"></div>
+    </div>
+    <el-scrollbar class="tags-wrapper"></el-scrollbar>
+  </el-header>
 </template>
 
 <script>
@@ -8,6 +14,6 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 </style>

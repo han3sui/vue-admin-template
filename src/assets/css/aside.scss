@@ -1,15 +1,10 @@
 .el-aside {
   .el-menu {
     border-right: none;
-  }
-
-  .el-menu-vertical {
     background-color: $aside-bg;
   }
 
   .el-submenu {
-    background-color: $aside-bg;
-
     &__title {
       color: $aside-color;
     }
@@ -24,7 +19,11 @@
 
       .is-active {
         background-color: $aside-item-active-bg;
-        color: $aside-active-color;
+
+        span, i {
+          color: $aside-active-color;
+        }
+
         // 关闭三级菜单二级菜单样式
         ul {
           border: none;
@@ -41,12 +40,6 @@
       }
     }
   }
-
-  //.is-opened{
-  //  .el-submenu{
-  //    background-color: $aside-expand-bg;
-  //  }
-  //}
 
   .el-menu-item:focus, .el-menu-item:hover {
     background-color: transparent;
