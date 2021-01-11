@@ -21,8 +21,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.app-body{
-  display: flex;
-  flex-direction: row;
-}
+
 </style>

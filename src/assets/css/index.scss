@@ -1,8 +1,44 @@
-#app {
-  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+@import "theme";
+@import "aside";
+
+body {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  border: none;
   color: #2c3e50;
   font-size: 14px;
+  margin: 0;
+}
+
+#app {
+  .app-body {
+    display: flex;
+    flex-direction: row;
+
+    .app-aside {
+      min-width: $aside-min-width;
+      background-color: $aside-bg;
+      color: #fff;
+
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        padding: 0 15px;
+
+        & h2 {
+          margin: 0;
+          padding-left: 10px;
+        }
+
+        & img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
 }

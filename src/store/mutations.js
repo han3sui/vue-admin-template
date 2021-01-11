@@ -9,6 +9,10 @@ const mutations = {
         }
       }
     }
+  },
+  // 设置路由数组
+  SET_ROUTES (state, res) {
+    state.permissionMenu = res
   }
 }
 export default mutations

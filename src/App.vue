@@ -8,3 +8,6 @@
     <router-view v-if="!$route.meta.keepAlive"/>
   </div>
 </template>
+<style lang="scss">
+@import "assets/css/index";
+</style>

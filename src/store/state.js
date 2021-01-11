@@ -1,5 +1,5 @@
 const defaultState = {
-
+  permissionMenu: []
 }
 const state = {
   ...defaultState,

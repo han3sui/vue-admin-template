@@ -1,5 +1,9 @@
 <template>
-  <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
+  <el-aside width="auto">
+    <div class="logo">
+      <img alt="" src="../../../src/assets/img/logo.png">
+      <h2>Vue-Admin-Temp</h2>
+    </div>
     <app-aside-menu/>
   </el-aside>
 </template>
@@ -12,6 +16,6 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 </style>
