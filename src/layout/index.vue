@@ -2,9 +2,9 @@
   <el-container class="app-body">
     <app-aside class="app-aside"/>
     <el-container class="app-container">
-      <app-nav class="app-nav"/>
-      <app-main class="app-main"/>
-      <app-footer class="app-footer"/>
+      <app-nav/>
+      <app-main/>
+      <app-footer/>
     </el-container>
   </el-container>
 </template>

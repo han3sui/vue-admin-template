@@ -1,7 +1,7 @@
 <template>
-  <el-main>
+  <section class="app-main">
     <router-view/>
-  </el-main>
+  </section>
 </template>
 
 <script>
@@ -11,9 +11,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.el-main{
+.app-main{
+  flex: 1;
+  overflow-y: auto;
   padding: 15px;
   margin: 15px;
-  background: #fff;
+  background-color: #fff;
 }
 </style>

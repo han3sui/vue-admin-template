@@ -34,17 +34,26 @@ const baseRoutes = [
         }]
       }]
     }, {
-      path: '/index',
+      path: '/dashboard',
+      name: 'Dashboard',
       meta: {
         title: '首页',
         icon: 'el-icon-user'
       },
       children: [{
         path: '/index1',
+        name: 'Dashboard1',
         meta: {
           title: '首页1'
         }
       }]
+    }, {
+      path: '/dashboard6',
+      name: 'Dashboard6',
+      meta: {
+        title: '首页6',
+        icon: 'el-icon-user'
+      }
     }]
   }
 ]

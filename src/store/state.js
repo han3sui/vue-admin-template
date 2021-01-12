@@ -1,5 +1,8 @@
 const defaultState = {
-  permissionMenu: []
+  // 用户菜单列表
+  permissionMenu: [],
+  // 左侧导航栏是否折叠
+  isCollapse: false
 }
 const state = {
   ...defaultState,

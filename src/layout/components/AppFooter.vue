@@ -1,5 +1,5 @@
 <template>
-  <el-footer>
+  <el-footer class="app-footer">
     <h4>Power By Han</h4>
   </el-footer>
 </template>

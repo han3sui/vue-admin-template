@@ -1,6 +1,7 @@
 @import "theme";
 @import "aside";
 @import "header";
+@import "transition";
 #app,body,html{
   width: 100%;
   height: 100%;
@@ -22,7 +23,6 @@ body {
     height: 100%;
 
     .app-aside {
-      min-width: $aside-min-width;
       background-color: $aside-bg;
       color: #fff;
 
@@ -51,15 +51,3 @@ body {
     }
   }
 }
-.el-scrollbar__wrap{
-  overflow-x: hidden;
-}
-//.el-scrollbar__bar{
-//  position: absolute;
-//  right: 2px;
-//  bottom: 2px;
-//  z-index: 1;
-//  border-radius: 4px;
-//  opacity: 0;
-//  transition: opacity .12s ease-out;
-//}
