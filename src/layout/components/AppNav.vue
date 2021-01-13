@@ -14,7 +14,7 @@
           </transition-group>
         </el-breadcrumb>
       </div>
-      <div class="navbar-right">
+      <div class="navbar-right" v-if="!isMobile">
         <el-dropdown>
           <div class="right-menu-item">
             <img alt="" class="user-avatar" src='../../assets/img/user.png'>
@@ -42,6 +42,9 @@ export default {
   computed: {
     collapse () {
       return this.$store.state.isCollapse
+    },
+    isMobile () {
+      return this.$store.state.isMobile
     }
   },
   watch: {
@@ -72,6 +75,7 @@ export default {
 }
 
 .app-nav {
+  overflow: hidden;
   .navbar-wrapper {
     display: flex;
     flex-direction: row;

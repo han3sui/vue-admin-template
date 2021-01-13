@@ -3,10 +3,6 @@
     border-right: none;
     background-color: $aside-bg;
 
-    &:not(.el-menu--collapse) {
-      min-width: $aside-min-width;
-    }
-
     .el-submenu__title:hover {
       background-color: transparent;
     }

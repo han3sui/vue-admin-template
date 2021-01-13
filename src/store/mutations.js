@@ -17,6 +17,10 @@ const mutations = {
   // 设置左侧菜单栏状态
   SET_COLLAPSE (state, res) {
     state.isCollapse = res
+  },
+  // 设置是否移动端
+  SET_ISMOBILE (state, res) {
+    state.isMobile = res
   }
 }
 export default mutations
