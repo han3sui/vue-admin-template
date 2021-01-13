@@ -27,11 +27,16 @@ export default {
     },
     scrollerWrap () {
       return {
-        height: 'calc(100vh - 80px)'
+        height: 'calc(100vh - 80px)',
+        backgroundColor: theme.asideBg
       }
     },
     collapse () {
-      return this.$store.state.isCollapse
+      if (this.$store.state.isMobile) {
+        return false
+      } else {
+        return this.$store.state.isCollapse
+      }
     },
     theme () {
       return theme

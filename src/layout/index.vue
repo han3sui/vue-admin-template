@@ -1,7 +1,8 @@
 <template>
   <el-container class="app-body">
-    <!--    <app-aside class="app-aside" :class="[collapse?'app-aside-hide':'app-aside-open']"/>-->
-    <app-aside/>
+    <div class="app-aside">
+      <app-aside/>
+    </div>
     <el-container class="app-container">
       <app-nav/>
       <app-main/>
@@ -32,29 +33,15 @@ export default {
   },
   created () {
     isMobile()
-    window.onresize = () => {
-      debounce(() => {
-        isMobile()
-      }, 300)
-    }
+    window.onresize = debounce(() => {
+      isMobile()
+    }, 300)
   }
 }
 </script>
 
 <style scoped lang="scss">
 .app-body {
-
-  //.app-aside {
-  //  background-color: $aside-bg;
-  //  color: #fff;
-  //  width: 64px !important;
-  //  transition: width .2s;
-  //
-  //  &.app-aside-open {
-  //    width: 250px !important;
-  //  }
-  //}
-
   .app-container {
     flex-direction: column;
     background-color: #f0f2f5;

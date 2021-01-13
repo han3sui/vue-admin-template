@@ -4,7 +4,7 @@
       <div class="navbar-left">
           <div class="left-icon-wrapper" @click="handleChangeCollapse">
             <transition name="fade">
-            <i :class="[collapse?'el-icon-s-unfold':'el-icon-s-fold']"/>
+            <i :class="[isMobile?'el-icon-s-operation':(collapse?'el-icon-s-unfold':'el-icon-s-fold')]"/>
             </transition>
           </div>
         <el-breadcrumb separator="/">
@@ -75,11 +75,13 @@ export default {
 }
 
 .app-nav {
-  overflow: hidden;
   .navbar-wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: 50px;
+    border-bottom: 1px solid #ebeef5;
+    overflow: hidden;
 
     .navbar-left {
       flex: 1;
@@ -114,6 +116,11 @@ export default {
         }
       }
     }
+  }
+  .tags-wrapper{
+    height: 34px;
+    border-bottom: 1px solid #e6e6e6;
+    box-shadow: 0 1px 4px rgba(0,21,41,.08);
   }
 }
 </style>

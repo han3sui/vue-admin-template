@@ -33,6 +33,7 @@ router.beforeEach(async (to, from, next) => {
 // 后置路由守卫
 router.afterEach(() => {
   NProgress.done()
+  store.commit('SET_COLLAPSE', false)
 })
 
 export default router

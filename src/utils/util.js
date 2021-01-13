@@ -24,7 +24,7 @@ export function debounce (func, delay) {
     timer && clearTimeout(timer)
     timer = setTimeout(() => {
       func.apply(this, args)
-    })
+    }, delay)
   }
 }
 
