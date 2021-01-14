@@ -1,8 +1,12 @@
 .app-aside {
+  background-color: $aside-bg;
   .el-menu {
     border-right: none;
     background-color: $aside-bg;
 
+    .el-submenu__title{
+      color: $aside-text-color;
+    }
     .el-submenu__title:hover {
       background-color: transparent;
     }
@@ -12,8 +16,23 @@
       color: $aside-text-active-color;
     }
 
+    .el-menu-item{
+      color: $aside-text-color;
+    }
+
     .el-menu-item.is-active {
+      color: $aside-text-active-color;
       background-color: $aside-item-active-bg !important;
+    }
+
+    .el-menu-item:focus,
+    .el-menu-item:hover {
+      background-color: transparent;
+    }
+
+    .el-menu-item:hover i,
+    .el-menu-item:hover span {
+      color: $aside-text-active-color;
     }
 
     .el-submenu.is-opened {
@@ -33,16 +52,6 @@
           }
         }
       }
-    }
-
-    .el-menu-item:focus,
-    .el-menu-item:hover {
-      background-color: transparent;
-    }
-
-    .el-menu-item:hover i,
-    .el-menu-item:hover span {
-      color: $aside-text-active-color;
     }
   }
 }

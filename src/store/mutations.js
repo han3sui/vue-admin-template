@@ -21,6 +21,19 @@ const mutations = {
   // 设置是否移动端
   SET_ISMOBILE (state, res) {
     state.isMobile = res
+  },
+  // 清空导航栏标签
+  CLEAR_NAVTAGS (state, res) {
+    state.navTags = []
+  },
+  // 添加导航栏标签
+  ADD_NAVTAG (state, res) {
+    if (state.navTags.findIndex(item => item.path === res.path) === -1) {
+      state.navTags.push(res)
+    }
+  },
+  DELETE_NAVTAG (state, index) {
+    state.navTags.splice(index, 1)
   }
 }
 export default mutations

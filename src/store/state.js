@@ -4,7 +4,9 @@ const defaultState = {
   // 左侧导航栏是否折叠
   isCollapse: false,
   // 是否移动端
-  isMobile: false
+  isMobile: false,
+  // 导航栏标签
+  navTags: []
 }
 const state = {
   ...defaultState,

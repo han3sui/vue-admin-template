@@ -31,9 +31,12 @@ router.beforeEach(async (to, from, next) => {
 })
 
 // 后置路由守卫
-router.afterEach(() => {
+router.afterEach((to, from) => {
   NProgress.done()
-  store.commit('SET_COLLAPSE', false)
+  store.commit('ADD_NAVTAG', to)
+  if (store.state.isMobile) {
+    store.commit('SET_COLLAPSE', false)
+  }
 })
 
 export default router

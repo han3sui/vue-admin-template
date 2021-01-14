@@ -41,7 +41,7 @@ const baseRoutes = [
         icon: 'el-icon-user'
       },
       children: [{
-        path: '/index1',
+        path: '/dashboard/index1',
         name: 'Dashboard1',
         meta: {
           title: '首页1'

@@ -6,9 +6,7 @@
       :unique-opened="true"
       :default-active="this.$route.path"
       :collapse="collapse"
-      :collapse-transition="false"
-      :text-color="theme.asideTextColor"
-      :active-text-color="theme.asideTextActiveColor">
+      :collapse-transition="false">
       <app-aside-menu-item v-for="item in routes" :key="item.path" :route="item"/>
     </el-menu>
   </el-scrollbar>

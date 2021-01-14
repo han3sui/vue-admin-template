@@ -62,6 +62,12 @@ export default {
   }
 }
 
+.mobile-aside{
+  ::v-deep .el-drawer{
+    background-color: $aside-bg;
+  }
+}
+
 .logo {
   display: flex;
   justify-content: center;
