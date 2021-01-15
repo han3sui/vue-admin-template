@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import store from '../store'
+import { logout } from '@/utils/api'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import baseRoutes from '@/router/baseRoutes'
@@ -22,8 +23,11 @@ NProgress.configure({ showSpinner: false })
 // 前置路由守卫
 router.beforeEach(async (to, from, next) => {
   NProgress.start()
-  if (store.state.permissionMenu.length === 0) {
-    store.commit('SET_ROUTES', baseRoutes[0].children.concat(permissionRoutes))
+  if (to.path === '/logout') {
+    logout()
+  } else if (store.state.permissionMenu.length === 0) {
+    const base = baseRoutes.filter(item => item.name === 'Index')[0].children
+    store.commit('SET_ROUTES', base.concat(permissionRoutes))
     next({ ...to, replace: true })
   } else {
     next()

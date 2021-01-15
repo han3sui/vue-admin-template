@@ -2,6 +2,14 @@ import Layout from '@/layout'
 
 const baseRoutes = [
   {
+    path: '/login',
+    name: 'Login',
+    meta: {
+      title: '登录'
+    },
+    component: () => import('../views/login/index')
+  },
+  {
     path: '/',
     name: 'Index',
     component: Layout,
@@ -48,11 +56,11 @@ const baseRoutes = [
         }
       }]
     }, {
-      path: '/dashboard6',
-      name: 'Dashboard6',
+      path: '/logout',
+      name: 'Logout',
       meta: {
-        title: '首页6',
-        icon: 'el-icon-user'
+        title: '退出',
+        icon: 'el-icon-switch-button'
       }
     }]
   }
