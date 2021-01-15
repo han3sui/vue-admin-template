@@ -202,11 +202,11 @@ export default {
 
         & span {
           white-space: nowrap;
+          padding-right: 5px;
         }
 
         & i {
           transition: all .3s;
-          margin-left: 3px;
           padding: 3px;
 
           &:hover {
