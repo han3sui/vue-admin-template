@@ -12,35 +12,16 @@ const baseRoutes = [
   {
     path: '/',
     name: 'Index',
+    redirect: '/form',
     component: Layout,
     children: [{
-      path: '/about',
-      name: 'About',
+      path: '/form',
+      name: 'Form',
       meta: {
-        title: '关于',
-        icon: 'el-icon-message'
+        title: '表单',
+        icon: 'el-icon-tickets'
       },
-      component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
-      children: [{
-        path: '/about1',
-        name: 'About1',
-        meta: {
-          title: '关于1'
-        }
-      }, {
-        path: '/about4',
-        name: 'About4',
-        meta: {
-          title: '关于4'
-        },
-        children: [{
-          path: '/about5',
-          name: 'About5',
-          meta: {
-            title: '关于5'
-          }
-        }]
-      }]
+      component: () => import(/* webpackChunkName: "form" */ '../views/form/index')
     }, {
       path: '/dashboard',
       name: 'Dashboard',
