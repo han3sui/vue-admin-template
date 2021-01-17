@@ -17,6 +17,11 @@ export default {
           type: 'input',
           label: '卡号',
           placeholder: '请输入卡号'
+        },
+        {
+          type: 'input',
+          label: '姓名',
+          placeholder: '请输入姓名'
         }
       ]
     }
