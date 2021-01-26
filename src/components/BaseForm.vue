@@ -2,15 +2,33 @@
   <el-form ref="form" :model="form" :inline="inline" :rules="rules" :class="inline?'form-wrapper':''" :label-position="labelPosition" :label-width="labelWidth">
     <template v-for="(item,index) in config">
       <slot v-if="$slots[item.prop]" :name="item.prop" />
-      <el-form-item v-else-if="['input','number','textarea'].includes(item.type)" :key="index" :style="{width:item.width?item.width:'auto'}" :label="item.label" :prop="item.prop">
-        <el-input v-model="form[item.prop]" :type="item.type" :placeholder="item.placeholder" clearable>
-          <template v-if="item.slot" :slot="item.slot.name">{{ item.slot.value }}</template>
-        </el-input>
-        <!--        如果是number类型，修改v-model绑定类型-->
-        <!--        <el-input v-if="item.type==='number'" v-model.number="form[item.prop]" :type="item.type" :placeholder="item.placeholder" clearable />-->
-        <!--        普通类型-->
-        <!--        <el-input v-else v-model="form[item.prop]" :type="item.type" :placeholder="item.placeholder" clearable />-->
+      <!--      <el-form-item v-else-if="['input','number','textarea'].includes(item.type)" :key="index" :style="{width:item.width?item.width:'auto'}" :label="item.label" :prop="item.prop">-->
+      <!--        &lt;!&ndash;        如果是number类型，修改v-model绑定类型&ndash;&gt;-->
+      <!--        <el-input v-if="item.type==='number'" v-model.number="form[item.prop]" :type="item.type" :placeholder="item.placeholder" clearable />-->
+      <!--        &lt;!&ndash;        普通类型&ndash;&gt;-->
+      <!--        <el-input v-else v-model="form[item.prop]" :type="item.type" :placeholder="item.placeholder" clearable />-->
+      <!--      </el-form-item>-->
+      <el-form-item v-if="item.type" :key="index" :style="{width:item.width?item.width:'auto'}" :label="item.label" :prop="item.prop">
+        <template v-if="['input','number','textarea'].includes(item.type)">
+          <el-input v-model="form[item.prop]" :type="item.type" :placeholder="item.placeholder" clearable>
+            <template v-if="item.slot" :slot="item.slot.name">{{ item.slot.value }}</template>
+          </el-input>
+        </template>
+        <template v-else-if="item.type==='select'">
+          <el-select v-model="form[item.prop]" clearable :placeholder="item.placeholder">
+            <el-option
+              v-for="(option,i) in item.options"
+              :key="i"
+              :label="option.label"
+              :value="option.value"
+            />
+          </el-select>
+        </template>
+        <template v-else-if="item.type==='daterange'">
+          <el-date-picker v-model="form[item.prop]" clearable :value-format="item.format||'yyyy-MM-dd'" type="daterange" range-separator="至" start-placeholder="开始日期" end-placeholder="结束日期" />
+        </template>
       </el-form-item>
+
     </template>
     <slot name="operate" />
   </el-form>
@@ -125,7 +143,7 @@ export default {
           // 如果是对象
           cloneObj = {}
           for (const key in target) {
-            if (Object.prototype.hasOwnProperty.call(target, key)) {
+            if (target.hasOwnProperty(key)) {
               cloneObj[key] = this.cloneDeep(target[key])
             }
           }
