@@ -22,6 +22,11 @@ export default {
           type: 'input',
           label: '姓名',
           placeholder: '请输入姓名'
+        },
+        {
+          type: 'button',
+          label: '查询',
+          color: 'primary'
         }
       ]
     }
