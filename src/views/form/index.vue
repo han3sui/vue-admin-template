@@ -1,15 +1,15 @@
 <template>
   <div>
-    <base-filter :data="filterData"/>
+    <base-table/>
   </div>
 </template>
 
 <script>
-import BaseFilter from '@/components/BaseFilter'
+import BaseTable from '@/components/BaseTable'
 
 export default {
   name: 'index',
-  components: { BaseFilter },
+  components: { BaseTable },
   data () {
     return {
       filterData: [

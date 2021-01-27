@@ -6,7 +6,9 @@ const defaultState = {
   // 是否移动端
   isMobile: false,
   // 导航栏标签
-  navTags: []
+  navTags: [],
+  // token
+  token: null
 }
 const state = {
   ...defaultState,
